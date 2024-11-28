@@ -10,8 +10,11 @@ public class Producto {
     private String proveedor;
     private final double costoPromedio;
     private final double costoTotal;
+    private int stockMinimo;
+    private int stockMaximo;
+    private int IdProveedor;
 
-    public Producto(int id, String nombre, String categoria, int cantidad, double precioUnitario, String fechaExpiracion, double costoPromedio) {
+    public Producto(int id, String nombre, String categoria, int cantidad, double precioUnitario, String fechaExpiracion, double costoPromedio, int stockMinimo, int stockMaximo, int IdProveedor) {
         this.id = id;
         this.nombre = nombre;
         this.categoria = categoria;
@@ -20,6 +23,9 @@ public class Producto {
         this.fechaExpiracion = fechaExpiracion;
         this.costoPromedio = costoPromedio;
         this.costoTotal = cantidad * costoPromedio;
+        this.stockMaximo = stockMaximo;
+        this.stockMinimo = stockMinimo;
+        this.IdProveedor = IdProveedor; 
     }
 
     public int getId() {
@@ -86,6 +92,30 @@ public class Producto {
         return costoTotal;
     }
 
+     public int getStockMinimo() {
+        return stockMinimo;
+    }
+
+    public void setStockMinimo(int stockMinimo) {
+        this.stockMinimo = stockMinimo;
+    }
+
+    public int getStockMaximo() {
+        return stockMaximo;
+    }
+
+    public void setStockMaximo(int stockMaximo) {
+        this.stockMaximo = stockMaximo;
+    }
+
+    public int getIdProveedor() {
+        return IdProveedor;
+    }
+
+    public void setIdProveedor(int idProveedor) {
+        this.IdProveedor = idProveedor;
+    }
+
     @Override
     public String toString() {
         return "Producto{" +
@@ -97,6 +127,8 @@ public class Producto {
                 ", Fecha de Expiración=" + fechaExpiracion +
                 ", Proveedor='" + proveedor + '\'' +
                 ", costoTotal='" + costoTotal + '\'' +
-                ", costoPromedio='" + costoPromedio;
+                ", costoPromedio='" + costoPromedio +
+                ", StockMinimo='" + stockMinimo + '\'' +
+                ", StockMaximo='" + stockMaximo;
     }
 }

@@ -2,10 +2,9 @@ package gestioninventario;
 
 import java.util.ArrayList;
 import java.util.List;
-import gestioninventario.Pedido;
 
 public class PedidoServicio {
-    private static final List<Pedido> pedidos = new ArrayList<>();
+    private static List<Pedido> pedidos = new ArrayList<>();
 
     public static void registrarPedido(Pedido pedido) {
         pedidos.add(pedido);

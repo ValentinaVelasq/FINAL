@@ -26,8 +26,8 @@ public class GestionInventario {
             login.setVisible(true);
 
             // Crear productos
-            Producto producto1 = new Producto(1, "Llantas", "Automotriz", 250, 143000, "2024-12-31", 1);
-            Producto producto2 = new Producto(2, "Rines", "Automotriz", 12, 150000, "2025-01-15", 2);
+            Producto producto1 = new Producto(1, "Llantas", "Automotriz", 250, 143000, "2024-12-31", 1,1,1,1);
+            Producto producto2 = new Producto(2, "Rines", "Automotriz", 12, 150000, "2025-01-15", 2,2,2,2);
 
             // Agregar productos al inventario
             productoServicio.agregarProducto(producto1);
